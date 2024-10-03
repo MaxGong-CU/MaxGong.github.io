@@ -1210,6 +1210,46 @@ input[type="radio"] + label:before {
   .icon.brands:before {
     font-family: 'Font Awesome 5 Brands'; }
 
+.image {
+  border-radius: 0.375em;
+  border: 0;
+  display: inline-block;
+  position: relative; }
+  .image img {
+    border-radius: 0.375em;
+    display: block; }
+  .image.left, .image.right {
+    max-width: 40%; }
+    .image.left img, .image.right img {
+      width: 100%; }
+  .image.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em; }
+  .image.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em; }
+  .image.fit {
+    display: block;
+    margin: 0 0 2em 0;
+    width: 100%; }
+    .image.fit img {
+      width: 100%; }
+  .image.main {
+    display: block;
+    margin: 0 0 3em 0;
+    width: 100%; }
+    .image.main img {
+      width: 100%; }
+
+
+.image-gallery {
+  display: flex;
+  justify-content: space-between; /* Distributes the images evenly */
+  gap: 1em; /* Adds space between the images */
+}
+
 /* Image */
 .image {
   border-radius: 0.375em;
@@ -2192,6 +2232,11 @@ button,
   #footer .copyright a {
     color: inherit; }
 
+#menu {
+  text-align: right; /* This should ensure right alignment */
+  padding: 0;
+}
+
 /* Menu */
 #menu ul {
   -moz-user-select: none;
@@ -2205,6 +2250,7 @@ button,
   list-style: none;
   margin-bottom: 0;
   padding: 0;
+  display: inline-block;
   text-transform: uppercase; }
   #menu ul a, #menu ul span {
     border-bottom: 0;
@@ -2254,9 +2300,10 @@ button,
         transform: rotate(-180deg); }
 
 #menu > ul > li {
-  border-top: solid 1px rgba(210, 215, 217, 0.75);
-  margin: 0.5em 0 0 0;
-  padding: 0.5em 0 0 0; }
+  border-top: none; /* Remove the top border */
+  margin: 0; /* No extra margin */
+  padding: 0em 0.5em; /* Adjust to keep space as needed */
+  display: inline-block; /* Change display to inline */}
   #menu > ul > li > ul {
     color: #9fa3a6;
     display: none;
@@ -2271,3 +2318,5 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+
